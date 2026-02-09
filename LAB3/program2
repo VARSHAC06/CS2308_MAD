@@ -1,1 +1,113 @@
+import { View, Image, StyleSheet, Text, ScrollView, TouchableOpacity } from 'react-native';
+
+export default function App() {
+  return (
+    <ScrollView contentContainerStyle={styles.container}>
+      
+      {}
+     <Image
+        source={{ uri: 'https://static.vecteezy.com/system/resources/thumbnails/055/053/895/small/delicate-pink-and-purple-flowers-blooming-abundantly-photo.jpg' }}
+        style={styles.image}
+      />
+
+      {}
+      <Text style={styles.name}>VARSHA C</Text>
+      <Text style={styles.role}>Android / React Native Developer</Text>
+
+      {}
+      <Text style={styles.sectionTitle}>About Me</Text>
+      <Text style={styles.text}>
+  Computer Applications student with a basic foundation in Java, Python, and Data Structures & Algorithms.
+  Learning Android and React Native development, and using GitHub for version control and project work.Always eager to learn and build efficient,scalable solutions.
+</Text>
+
+
+      {}
+      <Text style={styles.sectionTitle}>Skills</Text>
+<Text style={styles.text}>• Java</Text>
+<Text style={styles.text}>• Python</Text>
+<Text style={styles.text}>• Data Structures & Algorithms</Text>
+<Text style={styles.text}>• React Native</Text>
+<Text style={styles.text}>• Git & GitHub</Text>
+
+
+      {}
+      <Text style={styles.sectionTitle}>Education</Text>
+      <Text style={styles.text}>Bachelor of Computer Applications</Text>
+      <Text style={styles.text}>Computer Science</Text>
+
+      {}
+      <Text style={styles.sectionTitle}>Contact</Text>
+      <Text style={styles.text}>📧 varshacbca24@rvu.edu.in</Text>
+      <Text style={styles.text}>📱 +919972425891</Text>
+
+      {}
+      <TouchableOpacity style={styles.button}>
+        <Text style={styles.buttonText}>Download Resume</Text>
+      </TouchableOpacity>
+
+    </ScrollView>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    paddingTop: 60,
+    paddingBottom: 40,
+    alignItems: 'center',
+    backgroundColor: '#fdf2f8', // light pink pastel
+  },
+  image: {
+    width: 150,
+    height: 150,
+    borderRadius: 75,
+    resizeMode: 'cover',
+    marginBottom: 15,
+    borderWidth: 3,
+    borderColor: '#c084fc', // pastel purple
+  },
+  name: {
+    fontSize: 26,
+    fontWeight: 'bold',
+    color: '#4c1d95', // deep lavender
+  },
+  role: {
+    fontSize: 16,
+    color: '#6b7280', // soft gray
+    marginBottom: 20,
+  },
+  sectionTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    marginTop: 25,
+    marginBottom: 10,
+    alignSelf: 'flex-start',
+    marginLeft: 30,
+    color: '#db2777', // pastel rose
+  },
+  text: {
+    fontSize: 16,
+    marginBottom: 6,
+    alignSelf: 'flex-start',
+    marginLeft: 30,
+    marginRight: 30,
+    color: '#374151', // readable dark gray
+  },
+  button: {
+    backgroundColor: '#f9a8d4', // soft pink
+    paddingVertical: 14,
+    paddingHorizontal: 40,
+    borderRadius: 30,
+    marginTop: 30,
+    shadowColor: '#000',
+    shadowOpacity: 0.1,
+    shadowRadius: 6,
+    elevation: 4,
+  },
+  buttonText: {
+    color: '#4c1d95',
+    fontSize: 18,
+    fontWeight: 'bold',
+  },
+});
 
