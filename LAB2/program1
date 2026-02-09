@@ -1,0 +1,44 @@
+import React from "react";
+import {
+  Text,
+  Image,
+  TouchableOpacity,
+  Button,
+  Pressable,
+  SafeAreaView,
+  Alert
+} from "react-native";
+
+const App = () => {
+  return (
+    <SafeAreaView
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center"
+      }}
+    >
+      <Text>Hello, World!</Text>
+
+      <Image
+        source={{ uri: "https://images.unsplash.com/photo-1684841566839-b244b9dcee7a?q=80&w=735&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" }}
+        style={{ width: 150, height: 220, marginVertical: 10 }}
+      />
+
+      <Button
+        title="Click Me"
+        onPress={() => Alert.alert("Button clicked")}
+      />
+
+      <TouchableOpacity>
+        <Text style={{ marginTop: 10 }}>Me Touchable</Text>
+      </TouchableOpacity>
+
+      <Pressable onLongPress={() => Alert.alert("Long press detected!")}>
+        <Text style={{ marginTop: 5 }}>Me Pressable</Text>
+      </Pressable>
+    </SafeAreaView>
+  );
+};
+
+export default App;
