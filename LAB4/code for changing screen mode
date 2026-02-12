@@ -1,1 +1,59 @@
+import React from 'react';
+import {
+  View,
+  Text,
+  StyleSheet,
+  useColorScheme,
+  StatusBar
+} from 'react-native';
+
+export default function App() {
+  const scheme = useColorScheme(); // Detects dark or light mode
+  const isDark = scheme === 'dark';
+
+  return (
+    <View style={[
+      styles.container,
+      { backgroundColor: isDark ? '#121212' : '#ffffff' }
+    ]}>
+
+      <StatusBar
+        barStyle={isDark ? 'light-content' : 'dark-content'}
+      />
+
+      <Text style={[
+        styles.title,
+        { color: isDark ? '#ffffff' : '#000000' }
+      ]}>
+        Welcome to My App
+      </Text>
+
+      <Text style={[
+        styles.text,
+        { color: isDark ? '#cccccc' : '#333333' }
+      ]}>
+        This content changes based on Dark / Light mode.
+      </Text>
+
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    padding: 20,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: 'bold',
+    marginBottom: 10,
+  },
+  text: {
+    fontSize: 16,
+    textAlign: 'center',
+  },
+});
 
