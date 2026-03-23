@@ -1,0 +1,70 @@
+import React, { useState } from 'react';
+import {
+  View,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  StyleSheet,
+} from 'react-native';
+
+export default function HomeScreen({ navigation }) {
+  const [destination, setDestination] = useState('');
+
+  return (
+    <View style={styles.container}>
+      <Text style={styles.title}>Travel Explorer</Text>
+
+      <Text style={styles.subtitle}>Explore Your Destination</Text>
+
+      <TextInput
+        placeholder="Enter Destination Name"
+        style={styles.input}
+        value={destination}
+        onChangeText={setDestination}
+      />
+
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() =>
+          navigation.navigate('Destination', { place: destination })
+        }
+      >
+        <Text style={styles.buttonText}>Explore</Text>
+      </TouchableOpacity>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    padding: 20,
+    backgroundColor: '#e6e6e6',
+  },
+  title: {
+    fontSize: 26,
+    textAlign: 'center',
+    marginBottom: 10,
+    fontWeight: 'bold',
+  },
+  subtitle: {
+    textAlign: 'center',
+    marginBottom: 20,
+  },
+  input: {
+    backgroundColor: '#fff',
+    padding: 10,
+    borderRadius: 5,
+    marginBottom: 20,
+  },
+  button: {
+    backgroundColor: '#555',
+    padding: 12,
+    borderRadius: 5,
+  },
+  buttonText: {
+    color: '#fff',
+    textAlign: 'center',
+  },
+});
